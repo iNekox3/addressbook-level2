@@ -7,6 +7,7 @@ import java.util.Optional;
 import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.CommandResult;
 import seedu.addressbook.commands.ExitCommand;
+import seedu.addressbook.commands.HelpCommand;
 import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.parser.Parser;
@@ -110,6 +111,11 @@ public class Main {
             command.setData(addressBook, lastShownList);
             CommandResult result = command.execute();
             storage.save(addressBook);
+            return result;
+        } catch (StorageOperationException e) {
+            ui.showToUser(e.getMessage() + "\n File is read-only");
+            HelpCommand cmd = new HelpCommand();
+            CommandResult result = cmd.execute();
             return result;
         } catch (Exception e) {
             ui.showToUser(e.getMessage());
