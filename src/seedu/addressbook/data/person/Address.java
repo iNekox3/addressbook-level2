@@ -18,6 +18,7 @@ public class Address {
     public final Block block;
     public final Street street;
     public final Unit unit;
+    public final PostalCode postalCode;
 
     /**
      * Validates given address.
@@ -113,5 +114,23 @@ class Unit {
     @Override
     public String toString() {
         return unit;
+    }
+}
+
+class PostalCode {
+    private String postalCode;
+
+    public PostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    @Override
+    public PostalCode getPostalCode() {
+        return postalCode;
+    }
+
+    @Override
+    public String toString() {
+        return postalCode;
     }
 }
