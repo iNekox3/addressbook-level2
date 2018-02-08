@@ -15,6 +15,8 @@ public class Address {
     public final String value;
     private boolean isPrivate;
 
+    public final Block block;
+
     /**
      * Validates given address.
      *
@@ -55,5 +57,23 @@ public class Address {
 
     public boolean isPrivate() {
         return isPrivate;
+    }
+}
+
+class Block {
+    private String block;
+
+    public Block(String block) {
+        this.block = block;
+    }
+
+    @Override
+    public Block getBlock() {
+        return block;
+    }
+
+    @Override
+    public String toString() {
+        return block;
     }
 }
