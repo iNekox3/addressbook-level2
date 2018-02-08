@@ -16,6 +16,7 @@ public class Address {
     private boolean isPrivate;
 
     public final Block block;
+    public final Street street;
 
     /**
      * Validates given address.
@@ -75,5 +76,23 @@ class Block {
     @Override
     public String toString() {
         return block;
+    }
+}
+
+class Street {
+    private String street;
+
+    public Block(String street) {
+        this.street = street;
+    }
+
+    @Override
+    public Block getStreet() {
+        return street;
+    }
+
+    @Override
+    public String toString() {
+        return street;
     }
 }
