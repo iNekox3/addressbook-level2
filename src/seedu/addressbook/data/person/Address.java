@@ -17,6 +17,7 @@ public class Address {
 
     public final Block block;
     public final Street street;
+    public final Unit unit;
 
     /**
      * Validates given address.
@@ -82,17 +83,35 @@ class Block {
 class Street {
     private String street;
 
-    public Block(String street) {
+    public Street(String street) {
         this.street = street;
     }
 
     @Override
-    public Block getStreet() {
+    public Street getStreet() {
         return street;
     }
 
     @Override
     public String toString() {
         return street;
+    }
+}
+
+class Unit {
+    private String unit;
+
+    public Unit(String unit) {
+        this.unit = unit;
+    }
+
+    @Override
+    public Unit getUnit() {
+        return unit;
+    }
+
+    @Override
+    public String toString() {
+        return unit;
     }
 }
