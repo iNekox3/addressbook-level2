@@ -77,11 +77,6 @@ class Block {
     }
 
     @Override
-    public Block getBlock() {
-        return block;
-    }
-
-    @Override
     public String toString() {
         return block;
     }
@@ -92,11 +87,6 @@ class Street {
 
     public Street(String street) {
         this.street = street;
-    }
-
-    @Override
-    public Street getStreet() {
-        return street;
     }
 
     @Override
@@ -113,11 +103,6 @@ class Unit {
     }
 
     @Override
-    public Unit getUnit() {
-        return unit;
-    }
-
-    @Override
     public String toString() {
         return unit;
     }
@@ -128,11 +113,6 @@ class PostalCode {
 
     public PostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    @Override
-    public PostalCode getPostalCode() {
-        return postalCode;
     }
 
     @Override
