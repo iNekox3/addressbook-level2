@@ -133,5 +133,6 @@ public class AddressBook {
      * Sort all persons in the address book by names in alphabetical order.
      */
     public void sort() {
+        allPersons.sort();
     }
 }
