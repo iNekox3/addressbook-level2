@@ -34,4 +34,15 @@ public class Utils {
         }
         return true;
     }
+
+    /**
+    * Returns a new set of lower case string.
+    */
+    public static Set<String> convertSetStringToLowerCase(Set<String> items) {
+        Set<String> newItems = new HashSet<>();
+        for(String str : items) {
+            newItems.add(str.toLowerCase());
+        }
+        return newItems;
+    }
 }
