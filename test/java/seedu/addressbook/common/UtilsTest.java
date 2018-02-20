@@ -66,5 +66,5 @@ public class UtilsTest {
     
     private void assertHasNull(Object... objects) {
         assertTrue(Utils.isAnyNull(objects));
-    }1
+    }
 }
